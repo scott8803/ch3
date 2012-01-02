@@ -1,18 +1,41 @@
 require 'spec_helper'
 
 describe PagesController do
+  render_views
 
-  describe "GET 'home'" do
+  describe "GET home" do
     it "returns http success" do
-      get 'home'
+      get :home
       response.should be_success
+    end
+    
+    it 'should have right title' do
+      get :home
+      response.should have_selector("title", :content=> "ROR Tutorial | Home")
     end
   end
 
-  describe "GET 'contact'" do
+  describe "GET contact" do
     it "returns http success" do
-      get 'contact'
+      get :contact
       response.should be_success
+    end
+    
+    it 'should have right title' do
+      get :contact
+      response.should have_selector("title", :content=> "ROR Tutorial | Contact")
+    end
+  end
+
+  describe "GET about" do
+    it "returns http success" do
+      get :about
+      response.should be_success
+    end
+    
+    it 'should have right title' do
+      get :about
+      response.should have_selector("title", :content=> "ROR Tutorial | About")
     end
   end
 
