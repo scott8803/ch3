@@ -63,6 +63,18 @@ nav ul li a:hover {
 	text-decoration: underline;
 }
 
+/* Footer */
+footer {
+	text-align: center;
+	margin-top: 10px;
+	margin-left:auto;
+	margin-right:auto;	
+}
+
+footer nav {
+	float: none;
+}
+
 /* Sign up button */
 a.signup_button {
 	margin-left:auto;

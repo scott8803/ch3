@@ -39,4 +39,15 @@ describe PagesController do
     end
   end
 
+  describe "GET help" do
+    it "returns http success" do
+      get 'help'
+      response.should be_success
+    end
+    
+    it 'should have right title' do
+      get 'help'
+      response.should have_selector("title", :content=> "ROR Tutorial | Help")
+    end
+  end
 end
