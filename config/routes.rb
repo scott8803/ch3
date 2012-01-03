@@ -1,10 +1,10 @@
 Ch3::Application.routes.draw do
-  get "users/new"
-
   get "pages/home"
   get "pages/contact"
   get "pages/about"
   get "pages/help"
+  get "users/new"
+  
 	match '/about',	:to => 'pages#about'
 	match '/contact',	:to => 'pages#contact'
 	match '/help',	:to => 'pages#help'
