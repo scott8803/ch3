@@ -29,17 +29,19 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug'
 
-gem 'sqlite3'
 
 group :development do
+	gem 'sqlite3'
 	gem 'rspec-rails'
 	gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
 end
 
 group :test do
+	gem 'sqlite3'
 	gem 'rspec'
 	gem 'webrat'
 end
 
 group :production do
+	gem 'pg'
 end
