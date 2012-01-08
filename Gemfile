@@ -5,8 +5,6 @@ gem 'rails', '3.1.3'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
 gem 'json'
 
 # Gems used only for assets and not required
@@ -31,6 +29,8 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug'
 
+gem 'sqlite3'
+
 group :development do
 	gem 'rspec-rails'
 	gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
@@ -41,3 +41,5 @@ group :test do
 	gem 'webrat'
 end
 
+group :production do
+end
