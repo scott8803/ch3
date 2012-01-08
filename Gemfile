@@ -30,6 +30,10 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug'
 
+<<<<<<< HEAD
+=======
+gem 'sqlite3'
+>>>>>>> modeling-users
 
 group :development do
 	gem 'sqlite3'
@@ -44,5 +48,8 @@ group :test do
 end
 
 group :production do
+<<<<<<< HEAD
 	gem 'pg'
+=======
+>>>>>>> modeling-users
 end
