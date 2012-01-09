@@ -13,9 +13,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      # Handle a successful save.
-    else
-      @title = "Sign up"
+     	flash[:success] = "Sign up complete. Welcome to the Sample App!"
+     else
+      @title = "Sign Up"
       render 'new'
     end
   end
