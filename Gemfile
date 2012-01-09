@@ -30,6 +30,8 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug'
 
+gem 'gravatar_image_tag'
+
 group :development do
 	gem 'sqlite3'
 	gem 'rspec-rails'
@@ -40,6 +42,7 @@ group :test do
 	gem 'sqlite3'
 	gem 'rspec'
 	gem 'webrat'
+	gem 'factory_girl_rails'
 end
 
 group :production do
