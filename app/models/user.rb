@@ -4,11 +4,14 @@ class User < ActiveRecord::Base
 #
 # Table name: users
 #
-#  id         :integer         not null, primary key
-#  name       :string(255)
-#  email      :string(255)
-#  created_at :datetime
-#  updated_at :datetime
+#  id                 :integer         not null, primary key
+#  name               :string(255)
+#  email              :string(255)
+#  created_at         :datetime
+#  updated_at         :datetime
+#  encrypted_password :string(255)
+#  salt               :string(255)
+#  admin              :boolean         default(FALSE)
 #
 
 	attr_accessor :password
@@ -24,9 +27,10 @@ class User < ActiveRecord::Base
   # Automatically create the virtual attribute 'password_confirmation'.
   validates :password, :presence     => true,
                        :confirmation => true,
-                       :length       => { :within => 6..40 }
+                       :length       => { :within => 6..40 },
+                       :on => :create
 
- before_save :encrypt_password
+  before_create :encrypt_password
 
 	def has_password?(submitted_password)
 		encrypted_password == encrypt(submitted_password)

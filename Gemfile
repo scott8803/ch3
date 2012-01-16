@@ -31,11 +31,13 @@ gem 'jquery-rails'
 # gem 'ruby-debug'
 
 gem 'gravatar_image_tag'
+gem 'will_paginate'
 
 group :development do
 	gem 'sqlite3'
 	gem 'rspec-rails'
 	gem 'annotate', :git => 'git://github.com/jeremyolliver/annotate_models.git', :branch => 'rake_compatibility'
+	gem 'faker'
 end
 
 group :test do

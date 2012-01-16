@@ -8,8 +8,8 @@ class SessionsController < ApplicationController
 														 params[:session][:password])
 		if !user.nil?
 			sign_in user
-			redirect_to user
-		else
+   		redirect_back_or user
+   else
 			# Create an error message and re-render the signin form.
 			flash.now[:error] = "Login did not succeed; invalid information"
 			@title = "Sign in"

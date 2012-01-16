@@ -13,4 +13,3 @@ describe "FriendlyForwardings" do
     response.should render_template('users/edit')
   end
 end
-
