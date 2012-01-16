@@ -75,6 +75,8 @@ describe "Users" do
   describe "admin attribute" do
 
     before(:each) do
+			@attr = { :name => "New User", :email => "user@example.com",
+								:password => "foobar", :password_confirmation => "foobar" }
       @user = User.create!(@attr)
     end
 
