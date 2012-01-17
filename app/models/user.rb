@@ -1,5 +1,3 @@
-class User < ActiveRecord::Base
-
 # == Schema Information
 #
 # Table name: users
@@ -14,9 +12,11 @@ class User < ActiveRecord::Base
 #  admin              :boolean         default(FALSE)
 #
 
+class User < ActiveRecord::Base
 	attr_accessor :password
   attr_accessible :name, :email, :password, :password_confirmation
- 	
+  has_many :microposts
+  
 	email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i	
 
 	validates :name, 	:presence => true, 
