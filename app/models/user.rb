@@ -48,6 +48,10 @@ class User < ActiveRecord::Base
 		return user if user.salt == cookie_salt
 	end
 
+	def feed
+    Micropost.where("user_id = ?", id)
+  end
+	
   private
     def encrypt_password
       self.salt = make_salt unless has_password?(password)
